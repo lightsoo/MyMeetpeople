@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 import com.meetpeople.lightsoo.mymeetpeople.Fragment.ChatFragment;
 import com.meetpeople.lightsoo.mymeetpeople.Fragment.HomeFragment;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         //false해서 기존 title을 없애
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //밑에꺼 안쓰고 툴바를 framelayout에 넣어서 layout_gravity = center줘서 가운데로 오게햇어
+//        TextView toolbarTitle = (TextView)toolbar.findViewById(R.id.toolbar_main);
 
         tabHost = (FragmentTabHost)findViewById(R.id.tabhost);
         tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
