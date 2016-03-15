@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 
 import com.meetpeople.lightsoo.mymeetpeople.R;
 
-/**
- * Created by LG on 2016-03-07.
- */
 public class ChatFragment extends Fragment {
 
     @Override

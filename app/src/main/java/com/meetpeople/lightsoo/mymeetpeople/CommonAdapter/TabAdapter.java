@@ -1,8 +1,11 @@
 package com.meetpeople.lightsoo.mymeetpeople.CommonAdapter;
 
+import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.widget.TabHost;
 
 import com.meetpeople.lightsoo.mymeetpeople.Fragment.ChatFragment;
 import com.meetpeople.lightsoo.mymeetpeople.Fragment.HomeFragment;
@@ -12,9 +15,25 @@ import com.meetpeople.lightsoo.mymeetpeople.Fragment.WriteFragment;
 /**
  * Created by LG on 2016-03-07.
  */
-public class TabAdapter extends FragmentStatePagerAdapter{
+public class TabAdapter extends FragmentPagerAdapter {
+
+//    private final Context mContext;
+//    private final TabHost mTabHost;
 
     public TabAdapter(FragmentManager fm){super(fm);}
+
+    static final class TabInfo {
+        private final String tag;
+        private final Class<?> clss;
+        private final Bundle args;
+        private Fragment fragment;
+
+        TabInfo(String _tag, Class<?> _class, Bundle _args) {
+            tag = _tag;
+            clss = _class;
+            args = _args;
+        }
+    }
 
 
     @Override
